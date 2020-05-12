@@ -1,0 +1,18 @@
+{% extends 'template.html' %} 
+{% block title %}Global View{% endblock %} 
+{% block content %} 
+{% for locations in vidDetails %}
+<a href="{{ url_for('video', id=locations[0]) }}">
+    <div class="card" style="background-image: linear-gradient(-45deg, rgba(75, 108, 183, 0.2), rgba(29, 57, 113, 0.2)), url( {{ url_for('static', filename=locations[5])}});">
+        <div class="hvrbox-layer-top">
+            <div class="hvrbox-text">
+                <p>Name: {{ locations[1] }}</h2>
+                    <p>Location: {{ locations[2] }}</h2>
+                        <p>{{ locations[3] }}</p>
+                        <p><i><b>Click to view a live video feed</b></i></p>
+            </div>
+        </div>
+    </div>
+</a>
+{% endfor %} 
+{% endblock %}

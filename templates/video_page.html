@@ -1,0 +1,31 @@
+{% extends 'template.html' %} 
+{% block title %}Global View: {{location[1]}} Live Feed{% endblock %}
+{% block content %}
+    <div id="video-pane">
+        <img id="vid" src="{{ url_for('renderCamera', url=location[4]) }}" />
+        <p>{{ location[1] }}</p>
+        <p>{{ location[2] }}</p>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="nav">
+        <a href="{{ url_for('video', id=prevId )}}">
+            <div class="icon-container">
+                <i class="fas fa-arrow-left nav-icon"></i>
+            </div>
+        <a>
+        
+        <a href="{{ url_for('home') }}">
+            <div class="icon-container">
+                <i class="fas fa-home nav-icon"></i>
+            </div>
+        </a>
+
+        <a href="{{ url_for('video', id=nextId )}}">
+            <div class="icon-container">
+                <i class="fas fa-arrow-right nav-icon"></i>
+            </div>
+        <a>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/front_styling.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>GLOBAL VIEW</h1>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="main">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
