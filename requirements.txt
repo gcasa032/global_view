@@ -22,7 +22,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 mysqlclient==1.4.6
 npm==0.1.1
-numpy==1.18.4
+numpy==1.22.0
 opencv-python==4.2.0.34
 optional-django==0.1.0
 pycodestyle==2.5.0
